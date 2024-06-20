@@ -5,16 +5,19 @@ const userField = document.querySelector('#guessField');
 const guessSlot = document.querySelector('.guesses');
 const remaining = document.querySelector('.lastResult');
 const lowOrHi = document.querySelector('.lowOrHi');
-const startOver = document.querySelector('.resultParas')
+const startOver = document.querySelector('.resultParas');
+
+const newGameButton = document.querySelector('#newGame');
 
 let prevGuess = [];
 let numGuess = 1;
 
 let playGame = true;
 
-const p = document.createElement('p');
-
 if(playGame){
+    newGameButton.addEventListener('click',function(e){
+        newGame();
+    })
     submit.addEventListener('click',function(e){
         e.preventDefault();
         const guess = parseInt(userField.value);
@@ -83,9 +86,6 @@ function displayMessage(message){
 function endGame(){
     userField.value = '';
     userField.setAttribute('disabled','');
-    p.classList.add('button');
-    p.innerHTML = `<h2 id="newGame">New Game</h2>`;
-    startOver.appendChild(p);
     playGame = false;
     newGame();
 }
@@ -98,9 +98,8 @@ function newGame(){
         numGuess = 1;
         guessSlot.innerHTML = '';
         remaining.innerHTML = `${10}`;
+        lowOrHi.innerHTML = `<h2></h2>`;
         userField.removeAttribute('disabled');
-        startOver.removeChild(p);
-
         playGame = true;
     });
 }
