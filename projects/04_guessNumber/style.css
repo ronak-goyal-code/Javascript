@@ -88,3 +88,20 @@ p {
     font-size: 16px;
     text-align: center;
 }
+
+.gameButton{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#newGame{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    width: 125px;
+    height: 35px;
+    margin: 10px;
+    font-size: 15px;
+}
