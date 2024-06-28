@@ -1,0 +1,56 @@
+*{
+   margin: 0%;
+   padding: 0%;
+   box-sizing: border-box;
+}
+
+html,body{
+   width: 100%;
+   height: 100%;
+}
+
+body{
+    align-items: center;
+    display: flex;
+}
+
+#clock{
+    position: relative;
+    margin: auto;
+    /* border: 2px solid black; */
+    background: url(clock.jpeg) no-repeat;
+    height: 40vw;
+    width: 40vw;
+    background-size: 100%;
+}
+
+#hour{
+    background-color: black;
+    position: absolute;
+    width: 1.1%;
+    top: 20.5%;
+    height: 17%;
+    left: 49.4%;
+    border-radius: 1px;
+    transform-origin: bottom;
+}
+#minute{
+    background-color: black;
+    position: absolute;
+    width: 1%;
+    top: 17.5%;
+    height: 20%;
+    left: 49.6%;
+    border-radius: 1px;
+    transform-origin: bottom;
+}
+#second{
+    background-color: black;
+    position: absolute;
+    width: 0.7%;
+    top: 15.5%;
+    height: 21.7%;
+    left: 49.65%;
+    border-radius: 1px;
+    transform-origin: bottom;
+}
